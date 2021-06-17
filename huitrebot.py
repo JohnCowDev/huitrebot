@@ -28,14 +28,5 @@ async def on_message(message):
 
     if message.content.startswith('Hello there'):
         await message.channel.send('https://tenor.com/V1tn.gif')
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
-
-    if ("chocolatine") in message.content:
-        print("non pas bien")
-        await message.channel.send('Pas bien {}'.format(message.author.mention))
-        await message.delete()
-
+        
 client.run(str(input()))
